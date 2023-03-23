@@ -1,0 +1,10 @@
+
+  Singleton Pattern
+  Checklits:
+  To implement Singleton Pattern:
+  
+  - define a private static field in the 'singleton' class
+  - Make constructor private
+  - Implement public accessor function
+  - Implement lazy initialization-that is creation on first use-inside the accessor function
+  - Make sure that sure that accessor function is synchronized in case it is going to be used in multithreading environment

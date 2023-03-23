@@ -1,0 +1,12 @@
+
+ Factory Method Pattern 
+ Checklist: 
+ 
+ To implement Factory Method  pattern:
+ 1- Define hierachy of object 
+ 2- Design the arguments for the factory method. Think about qualities or characteristics
+ that are necessary and sufficient to identify the correct derived class to
+ instantiate 
+ 3- Call Factory method during the runtime to instantiate the object
+ that you need
+

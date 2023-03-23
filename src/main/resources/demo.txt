@@ -1,0 +1,2 @@
+This example shows how to write to a File using FileChannel. 
+" +FileChannel can be faster thant standard I/O if you're dealing with large files 

@@ -1,0 +1,7 @@
+Abstract Factory Pattern
+Checklist:
+
+To implement Abstract Factory pattern:
+ - Implement class groups or so called type families
+ - Declare Abstract Factory interface with factory method per product
+ - Use abstract factory to instantiate group of related objects

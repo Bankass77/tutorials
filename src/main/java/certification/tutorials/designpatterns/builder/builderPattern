@@ -1,0 +1,15 @@
+Builder Pattern
+checklist:
+To implement builder pattern with director we have to:
+- declare builder interface
+- create multiple builders
+- create director that can work with different builders
+- In client code instantiate director and  concrete implementation of builder to build new objects
+
+TO implement builder pattern with chain method calls we have to:
+ - Create inner Builder class inside type that we want to build
+ - implement method in type that return reference to the builder object
+ - Declare setters in builder that returns the reference to this builder object
+ - Implement build() method to terminate method chain and return target object
+ - In client code call method to get reference to builder and build object step-by-step
+ 

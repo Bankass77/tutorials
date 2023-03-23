@@ -1,0 +1,10 @@
+
+  Prototype Pattern
+  Checklist:
+  To implement Prototype Pattern:
+  
+  - Add clone() method to hierarchy of our objects.
+  - Design a registry that maintains a cache of prototypical objects
+  - Design API that allows to clone  object clone inside the factory and return new object as a result.
+  - Use factory API instead of NEW keyword to instantiate the objects
+ 
