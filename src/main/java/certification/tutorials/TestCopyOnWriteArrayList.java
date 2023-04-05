@@ -9,7 +9,9 @@ public class TestCopyOnWriteArrayList {
 
 	public static void main(String[] args) {
 		var list1 = new ArrayList<>(List.of(1, 2, 3));
+		System.out.println("list1:"+list1);
 		var list2 = new CopyOnWriteArrayList<Integer>(list1);
+		System.out.println("list2:"+list2);
 		var map3 = new ConcurrentHashMap<Integer, Integer>();
 		map3.put(1, 2);
 		map3.put(3, 3);
