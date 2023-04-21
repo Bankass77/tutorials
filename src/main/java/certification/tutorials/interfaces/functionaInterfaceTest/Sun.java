@@ -1,4 +1,4 @@
-package certification.tutorials.interfaces.functionInterfaceTest;
+package certification.tutorials.interfaces.functionaInterfaceTest;
 
 import java.util.function.DoubleUnaryOperator;
 import java.util.function.UnaryOperator;

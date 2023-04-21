@@ -2,7 +2,7 @@ package certification.tutorials.string;
 
 import java.util.Scanner;
 
-public class Solution {
+public class PrintEvenOddChars {
 
 	private static void printEvenOddChars(String s) {
         StringBuilder evenChars = new StringBuilder();
