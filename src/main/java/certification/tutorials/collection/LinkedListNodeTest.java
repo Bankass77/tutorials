@@ -5,20 +5,20 @@ import java.util.LinkedList;
 import lombok.Data;
 
 @Data
-public class LinkedListTest {
+public class LinkedListNodeTest {
 
 	// Initially the head and tail of the linked list set to null
 	public Node head = null;
 	public Node tail = null;
 	int data;
 
-	public LinkedListTest() {
+	public LinkedListNodeTest() {
 
 		head = null;
 		data = 0;
 	}
 
-	public LinkedListTest(Node newHead) {
+	public LinkedListNodeTest(Node newHead) {
 
 		head = newHead;
 		data = 0;
