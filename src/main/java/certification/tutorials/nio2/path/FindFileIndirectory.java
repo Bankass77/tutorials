@@ -1,4 +1,4 @@
-package certification.tutorials.path;
+package certification.tutorials.nio2.path;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class FindFileIndirectory {
 	public static void main(String[] args) throws IOException {
 
 		File file = new File("/opt/");
-
+      
 		findAllFilesInFolder(file);
 
 	}

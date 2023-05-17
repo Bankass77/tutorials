@@ -1,6 +1,5 @@
-package certification.tutorials.path;
+package certification.tutorials.nio2.path;
 
-import java.awt.geom.IllegalPathStateException;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;

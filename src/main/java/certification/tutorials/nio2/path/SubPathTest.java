@@ -1,6 +1,5 @@
-package certification.tutorials.path;
+package certification.tutorials.nio2.path;
 
-import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class SubPathTest {

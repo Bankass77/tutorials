@@ -1,4 +1,4 @@
-package certification.tutorials.path;
+package certification.tutorials.nio2.path;
 
 import java.nio.file.FileSystems;
 import java.nio.file.Path;

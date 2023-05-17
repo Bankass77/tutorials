@@ -1,4 +1,4 @@
-package certification.tutorials.encoding;
+package certification.tutorials.nio2.encoding;
 
 import java.nio.charset.Charset;
 

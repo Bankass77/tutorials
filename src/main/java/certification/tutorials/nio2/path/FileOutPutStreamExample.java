@@ -1,4 +1,4 @@
-package certification.tutorials.path;
+package certification.tutorials.nio2.path;
 
 import java.io.FileOutputStream;
 import java.io.IOException;

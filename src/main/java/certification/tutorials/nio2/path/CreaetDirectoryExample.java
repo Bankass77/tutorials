@@ -1,4 +1,4 @@
-package certification.tutorials.path;
+package certification.tutorials.nio2.path;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;

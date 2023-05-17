@@ -1,4 +1,4 @@
-package certification.tutorials.path;
+package certification.tutorials.nio2.path;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -11,10 +11,10 @@ public class NormalizingAPathTest {
 		System.out.println(p1.normalize()); // shells.txt
 		
 		var p2= Path.of("/cats/../panther/food");
-		System.out.println(p2.normalize()); // pathre/food
+		System.out.println(p2.normalize()); // panther/food
 		
 		var p3= Path.of("../../fish.txt");
-		System.out.println(p3.normalize());  //..//../fish.txt
+		System.out.println(p3.normalize());  //../../fish.txt
 		
 		
 		// compare two Paths with normalize() method

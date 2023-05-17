@@ -1,4 +1,4 @@
-package certification.tutorials.path;
+package certification.tutorials.nio2.path;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -7,6 +7,13 @@ public class RelativizingAPathTest {
 
 	public static void main(String[] args) {
 
+		
+		var p1= Path.of("/zoo/./bear", "../food.txt");
+		p1.normalize().relativize(Path.of("/lion"));
+		//System.out.println(p1.normalize().relativize(Path.of("/lion")));
+		System.out.println("p1: " + " "+p1);
+		
+		System.out.println();
 		System.out.println("------two relative paths-------------");
 		System.out.println();
 		var path1 = Path.of("fish.txt");
@@ -25,6 +32,8 @@ public class RelativizingAPathTest {
 		Path path5= Paths.get("/primate/chimpanzee");
 		Path path6= Paths.get("bananas.txt");
 		System.out.println(path5.relativize(path6));// IllegalArgumentException
+		
+		
 		
 	}
 
