@@ -66,13 +66,13 @@ public class MyFirstDatabaseConnection {
 
 		var sql = "SELECT * FROM names";
 
-		/*
-		 * try (var ps2 = conn.prepareStatement(sql)) {
-		 * 
-		 * var result = ps2.executeUpdate();
-		 * 
-		 * System.out.println(result); }
-		 */
+		
+		  try (var ps2 = conn.prepareStatement(sql)) {
+		  
+		  var result = ps2.executeUpdate();
+		  
+		  System.out.println(result); }
+		 
 
 		// Batching Statements
 		register(conn, 100, 1, "Elias", "Ester");
@@ -83,7 +83,8 @@ public class MyFirstDatabaseConnection {
 		var sql3 = "SELECT count(*) AS count FROM exhibits";
 
 		var idToNameMap = new HashMap<Integer, String>();
-		try (var ps3 = conn.prepareStatement(sql2); ResultSet rs = ps3.executeQuery()) {
+		try (var ps3 = conn.prepareStatement(sql2); 
+				ResultSet rs = ps3.executeQuery()) {
 
 			while (rs.next()) {
 				int id = rs.getInt("id");
@@ -93,30 +94,31 @@ public class MyFirstDatabaseConnection {
 			}
 			System.out.println(idToNameMap);
 		}
-		/*
-		 * try(var ps4= conn.prepareStatement(sql3); ResultSet rs= ps4.executeQuery()){
-		 * 
-		 * if (rs.next()) {
-		 * 
-		 * var count= rs.getInt("total"); System.out.println(count);
-		 * 
-		 * } }
-		 */
+		
+		  try(var ps4= conn.prepareStatement(sql3); ResultSet rs= ps4.executeQuery()){
+		  
+		  if (rs.next()) {
+		  
+		  var count= rs.getInt("total"); 
+		  System.out.println(count);
+		  
+		  } }
+		 
 
-		/*
-		 * var sql5 = "SELECT id FROM exhibits WHERE name = ?";
-		 * 
-		 * 
-		 * try(var ps5=conn.prepareStatement(sql5)){
-		 * 
-		 * ps5.setString(1,"Zebra");
-		 * 
-		 * try( var rs = ps5.executeUpdate()){
-		 * 
-		 * while(rs.next()) {
-		 * 
-		 * int id= rs.getInt("id"); System.out.println(id); } } }
-		 */
+		
+		  var sql5 = "SELECT id FROM exhibits WHERE name = ?";
+		  
+		  
+		  try(var ps5=conn.prepareStatement(sql5)){
+		  
+		  ps5.setString(1,"Zebra");
+		  
+		  try( var rs5 = ps5.executeUpdate()){
+		  
+		  while(rs5.next()) {
+		  
+		  int id= rs5.getInt("id"); System.out.println(id); } } }
+		 
 
 		// Calling a Procedure without Parameters
 		String sql6 = "{call read_e_names()}";
@@ -129,21 +131,19 @@ public class MyFirstDatabaseConnection {
 		}
 
 		// Passing an IN Parameter
-
-		/*
-		 * var sql7= "{call read_names_by_letter(?)}";
-		 * 
-		 * 
-		 * try(var cs= conn.prepareCall(sql7)){ cs.setString("prefix", "Z");
-		 * 
-		 * try(var rs=cs.executeUpdate()){
-		 * 
-		 * while(rs.next()) {
-		 * 
-		 * System.out.println(rs.getString(3)); } }
-		 * 
-		 * }
-		 */
+		  var sql7= "{call read_names_by_letter(?)}";
+		  
+		  
+		  try(var cs= conn.prepareCall(sql7)){ cs.setString("prefix", "Z");
+		  
+		  try(var rs=cs.executeUpdate()){
+		  
+		  while(rs.next()) {
+		  
+		  System.out.println(rs.getString(3)); } }
+		  
+		  }
+		 
 
 		// Returning an OUT Parameter
 
